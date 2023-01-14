@@ -14,7 +14,7 @@ class Sourcegraph < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/sourcegraph/sourcegraph-app/releases/download/v0.0.0-devel/sourcegraph_0.0.0-devel_darwin_arm64.zip"
-      sha256 "d7849624557adcd7444f71a721055d36713d95d800caeaab9ae78f333cb19f24"
+      sha256 "310101e9424b599902e4f578ac0128e9615b0e1de72a518ddeac8666c739f1f2"
 
       def install
         bin.install "sourcegraph"
@@ -22,7 +22,7 @@ class Sourcegraph < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/sourcegraph/sourcegraph-app/releases/download/v0.0.0-devel/sourcegraph_0.0.0-devel_darwin_amd64.zip"
-      sha256 "3ddb8f634dc8d7168750faf57ece285a8835189634d6f79fedf5c2e3c496c632"
+      sha256 "6a96aa9455017119cd8ca2a92cf2f4da872ded197ebb17b6e022ba5292ab5afc"
 
       def install
         bin.install "sourcegraph"
@@ -33,7 +33,7 @@ class Sourcegraph < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/sourcegraph/sourcegraph-app/releases/download/v0.0.0-devel/sourcegraph_0.0.0-devel_linux_amd64.zip"
-      sha256 "ac1f966a088bbaf71f9fe78bfdb3a70ca47358c278b2d183d8702696c25ded6d"
+      sha256 "e2ce155bafa2595d4ad0d988d456e4996dd64a2024e68893cbd1324db64f9654"
 
       def install
         bin.install "sourcegraph"
