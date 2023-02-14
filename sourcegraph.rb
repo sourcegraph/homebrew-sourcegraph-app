@@ -5,7 +5,7 @@
 class Sourcegraph < Formula
   desc "Code intelligence and search"
   homepage "https://github.com/sourcegraph/sourcegraph"
-  version "0.0.196654-snapshot+20230131-c8641e"
+  version "0.0.198532-snapshot+20230214-c020c8"
   license "Sourcegraph Enterprise License (portions licensed under Apache 2)"
 
   depends_on "git"
@@ -13,17 +13,17 @@ class Sourcegraph < Formula
   depends_on "sourcegraph/src-cli/src-cli"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://storage.googleapis.com/sourcegraph-app-releases/0.0.196654-snapshot+20230131-c8641e/sourcegraph_0.0.196654-snapshot+20230131-c8641e_darwin_amd64.zip"
-      sha256 "dd069db0e76b0d1481868238fc0b35ee9c4498213b9f2289c923767562872e61"
+    if Hardware::CPU.arm?
+      url "https://storage.googleapis.com/sourcegraph-app-releases/0.0.198532-snapshot+20230214-c020c8/sourcegraph_0.0.198532-snapshot+20230214-c020c8_darwin_arm64.zip"
+      sha256 "d4acfbdf71ce2652c92236cf473171d817b8c8dbde81e0cc1dd32fafbe7f1a0e"
 
       def install
         bin.install "sourcegraph"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://storage.googleapis.com/sourcegraph-app-releases/0.0.196654-snapshot+20230131-c8641e/sourcegraph_0.0.196654-snapshot+20230131-c8641e_darwin_arm64.zip"
-      sha256 "990c6f8aef0a303e25794c2f5bc17e45b5c04048e69c8b3069851331ad3f50f7"
+    if Hardware::CPU.intel?
+      url "https://storage.googleapis.com/sourcegraph-app-releases/0.0.198532-snapshot+20230214-c020c8/sourcegraph_0.0.198532-snapshot+20230214-c020c8_darwin_amd64.zip"
+      sha256 "d3a6b8ed0832db69bcf83ce84e90062ee0d2b01dbc0d26dcc6b50f031e5f5fed"
 
       def install
         bin.install "sourcegraph"
@@ -33,8 +33,8 @@ class Sourcegraph < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://storage.googleapis.com/sourcegraph-app-releases/0.0.196654-snapshot+20230131-c8641e/sourcegraph_0.0.196654-snapshot+20230131-c8641e_linux_amd64.zip"
-      sha256 "cb3e2d24375fbfdcad8171c3d5688b4196999dcafcdaf89cb90a55bddf7aac6d"
+      url "https://storage.googleapis.com/sourcegraph-app-releases/0.0.198532-snapshot+20230214-c020c8/sourcegraph_0.0.198532-snapshot+20230214-c020c8_linux_amd64.zip"
+      sha256 "58833a6e695ffc40ef17c9861cad47a6864ed14ba6ec6e30d047d4fe0f1f2990"
 
       def install
         bin.install "sourcegraph"
